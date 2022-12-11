@@ -40,8 +40,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<goal>install</goal>
+					<checkModificationExcludes>
+						<checkModificationExclude>pom.xml</checkModificationExclude>
+					</checkModificationExcludes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<developerConnection>scm:git:git@github.com:karim2019aj/TestSnapshot.git</developerConnection>
+	</scm>
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
